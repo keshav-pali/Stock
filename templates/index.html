@@ -5,6 +5,7 @@
 </head>
 <body style="text-align: center; margin-top: 50px; font-family: Arial;">
     <h1>📊 Summer_project - Stock Price Predictor</h1>
+
     <form method="POST">
         <input type="text" name="symbol" placeholder="Enter stock symbol (e.g. AAPL)" required>
         <button type="submit">Predict</button>
@@ -12,6 +13,10 @@
 
     {% if prediction %}
         <h2>Predicted Next Close Price: ${{ prediction }}</h2>
+        <p><strong>Today's High:</strong> {{ high }}</p>
+        <p><strong>Today's Low:</strong> {{ low }}</p>
+        <p><strong>Today's Average:</strong> {{ avg }}</p>
+        <p><strong>Today's Volume:</strong> {{ volume }}</p>
     {% endif %}
 </body>
 </html>
